@@ -1,67 +1,44 @@
-import { useRouter } from 'next/router';
+'use client'
+import styles from "../page.module.css";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+
 
 export default function Login() {
-const router = useRouter();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const router = useRouter();
 
+  function verificarLogin(e) {
+    e.preventDefault();
+    if (email !== 'a@gmail.com' || password !== 'nota10') {
+      setError('E-mail ou senha inválidos');
+      return;
+    }
 
-    return (
-      <div style={styles.container}>
-        <form style={styles.form}>
-          <h1>Login</h1>
-          
-          <div style={styles.inputGroup}>
-            <label>Email:</label>
-            <input type="email" style={styles.input} required />
-          </div>
-  
-          <div style={styles.inputGroup}>
-            <label>Senha:</label>
-            <input type="password" style={styles.input} required />
-          </div>
-  
-          <button type="submit" style={styles.button}>Login</button>
-          
-        </form>
-        
-      </div>
-    );
+    setError('');
+    router.push('/logado')
   }
-  
-  const styles = {
-    container: {
-    color: 'black',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      height: '100vh',
-      backgroundColor: '#f0f0f0',
-    },
-    form: {
-      backgroundColor: '#fff',
-      padding: '20px',
-      borderRadius: '8px',
-      width: '300px',
-      textAlign: 'center',
-    },
-    inputGroup: {
-      marginBottom: '15px',
-      textAlign: 'left',
-    },
-    input: {
-     backgroundColor: 'white',
-      width: '100%',
-      padding: '8px',
-      borderRadius: '4px',
-      marginTop: '5px',
-    },
-    button: {
-      padding: '10px 15px',
-      backgroundColor: '#0070f3',
-      color: '#fff',
-      border: 'none',
-      borderRadius: '4px',
-      cursor: 'pointer',
-      width: '100%',
-    },
-  };
-  
+
+  return (
+    <div className={styles.page}>
+      <div className={styles.main}>
+        <h2>Login</h2>
+        <form onSubmit={verificarLogin} className={styles.formulario} >
+
+          <input type="text" 
+           onChange={(e) => setEmail(e.target.value)}
+           placeholder="Email" required className={styles.input}/>
+          <input type="password" 
+           onChange={(e) => setPassword(e.target.value)}
+           placeholder="Senha" required className={styles.input}/>
+
+          <p style={{color:'white'}}>{error}</p>
+          <button type="submit" className={styles.link}>Login</button> 
+        </form>
+      </div>
+    </div>
+
+  );
+}
