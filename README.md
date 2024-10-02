@@ -1,7 +1,7 @@
 
 # Aplicação de Login com Next.js e TypeScript
 
-Este projeto foi desenvolvido como parte de uma atividade para a disciplina **PROGRAMAÇÃO E TECNOLOGIAS PARA APLICAÇÕES CLIENTE 3 (PTAC3)**, utilizando **Next.js** pela primeira vez com **TypeScript**. O objetivo principal foi criar uma aplicação simples de login e rotas básicas.
+Este projeto foi desenvolvido como parte de uma atividade para a disciplina **PROGRAMAÇÃO E TECNOLOGIAS PARA APLICAÇÕES CLIENTE 4 (PTAC4)**, utilizando **Next.js** pela primeira vez com **TypeScript**. O objetivo principal foi criar uma aplicação simples de login e rotas básicas.
 
 Repositório do projeto no GitHub: [Atividade PTAC - Login com Next.js e TypeScript](https://github.com/Victor14791012/atividade-ptac-21-09)
 
