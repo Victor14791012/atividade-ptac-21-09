@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Aplicação de Login com Next.js e TypeScript
 
-First, run the development server:
+Este projeto foi desenvolvido como parte de uma atividade para a disciplina **PROGRAMAÇÃO E TECNOLOGIAS PARA APLICAÇÕES CLIENTE 4 (PTAC4)**, utilizando **Next.js** pela primeira vez com **TypeScript**. O objetivo principal foi criar uma aplicação simples de login e rotas básicas.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Repositório do projeto no GitHub: [Atividade PTAC - Login com Next.js e TypeScript](https://github.com/Victor14791012/atividade-ptac-21-09)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Funcionalidades
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js com TypeScript**: Primeira aplicação feita com Next.js utilizando TypeScript para maior segurança no código.
+- **Rotas Básicas**: Foram criadas rotas simples como a página de login e a página inicial (home).
+- **Login com Verificação de Credenciais**: 
+  - Se as credenciais estiverem incorretas, uma mensagem de erro é exibida dentro de um elemento `<p>`, informando que o email ou senha estão incorretos.
+  - Se as credenciais estiverem corretas, o usuário é redirecionado para a página de **logado**.
+  
+## Tecnologias Utilizadas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js**: Framework React para renderização no lado do servidor e geração de rotas.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática, tornando o código mais robusto.
+- **CSS**: Utilizado para estilizar as páginas e componentes.
 
-## Learn More
+## Estrutura do Projeto
 
-To learn more about Next.js, take a look at the following resources:
+- **Páginas**: Implementa o roteamento com as rotas de login e home.
+- **Componentes**: Componentes reutilizáveis, como inputs e formulários, foram criados e utilizados na página de login.
+  
+## Como Executar o Projeto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/Victor14791012/atividade-ptac-21-09.git
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Navegue até a pasta do projeto:
+   ```bash
+   cd atividade-ptac-21-09
+   ```
 
-## Deploy on Vercel
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Execute o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5. Abra o navegador e vá para:
+   ```
+   http://localhost:3000
+   ```
+
+## Funcionalidade de Login
+
+A página de login verifica as credenciais inseridas no formulário:
+
+- **Credenciais Incorretas**: Exibe uma mensagem de erro no formulário dizendo "Email ou senha estão incorretos".
+- **Credenciais Corretas**: Redireciona o usuário para a página "logado", indicando que a autenticação foi bem-sucedida.
+
+## Status do Projeto
+
+Atualmente, o projeto conta apenas com a funcionalidade de login e a página inicial (home). Futuramente, outras funcionalidades podem ser adicionadas conforme o desenvolvimento avançar.
+
+---
+
+Projeto desenvolvido por **Victor Hugo Lourenço de Carvalho**.
