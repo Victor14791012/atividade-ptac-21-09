@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Home() {
  return( 
- <div> <h1>Faça o Login poha.</h1>
+ <div> <h1>Faça o Login.</h1>
 
   <Link href="/login">
           <p className={styles.fale_conosco}> Clique aqui para Login</p>
